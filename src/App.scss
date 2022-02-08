@@ -3,4 +3,17 @@
 body {
   background: $bodyBgColor;
   color: $mainColor;
+  font-family: $mainFontFamily;
+}
+
+h1 {
+  font-size: 42px;
+  padding: 20px !important;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 20px !important;
 }

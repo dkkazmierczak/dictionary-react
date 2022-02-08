@@ -1,0 +1,34 @@
+@import "../sass/standard.scss";
+
+.Contact {
+  text-align: center;
+  .image-container {
+    padding: 20px;
+
+    .image {
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+  .links {
+    .portfolio-link,
+    .contact-link {
+      border: 2px solid black;
+      width: 80%;
+      display: block;
+      margin: 5px auto;
+      padding: 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
+
+    .portfolio-link {
+      background: black;
+
+      a:-webkit-any-link {
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

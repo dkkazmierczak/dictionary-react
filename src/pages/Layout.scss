@@ -1,0 +1,21 @@
+@import "../sass/standard.scss";
+
+.Layout {
+  .links {
+    text-align: center;
+    padding: 20px 0;
+
+    li {
+      display: inline;
+    }
+
+    .link-item {
+      padding: 0 20px;
+    }
+  }
+
+  a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+  }
+}
