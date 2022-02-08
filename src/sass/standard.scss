@@ -1,0 +1,13 @@
+@import "colors";
+@import "reset";
+
+* {
+  scroll-behavior: smooth;
+}
+
+$borderRadius: 20px;
+
+$mainFontFamily: "Nunito", sans-serif;
+$secondFontFamily: Poppins, sans-serif;
+
+$transition: all 150ms ease-in-out;
