@@ -1,11 +1,11 @@
-import main from "../images/main2.jpg"
+import profile from "../images/profile.jpg"
 import "./Contact.scss"
 
 const Contact = () => {
   return (
     <div className="Contact">
       <div className="image-container">
-        <img src={main} alt="Profile" className="image" />
+        <img src={profile} alt="Profile" className="image" />
       </div>
       <h1>Dominika</h1>
       <h2>Basen in Halden, Norway</h2>
