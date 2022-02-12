@@ -1,10 +1,11 @@
 import { useState } from "react"
 import axios from "axios"
+import Result from "./Result"
 import "./Search.scss"
 
 const Search = () => {
   const [change, setChange] = useState("")
-  const [wordData, setWordData] = useState("")
+  const [results, setResults] = useState("")
 
   const searchWord = async e => {
     e.preventDefault()
@@ -12,8 +13,10 @@ const Search = () => {
     const { data } = await axios.get(apiUrl)
     console.log(data)
 
-    setWordData({
-      name: data[0].word,
+    setResults({
+      word: data[0].word,
+      meanings: data[0].meanings,
+      phonetic: data[0].phonetics[0].text,
     })
   }
 
@@ -24,7 +27,7 @@ const Search = () => {
   return (
     <div className="Search">
       <h1>Search</h1>
-      <form onSubmit={searchWord}>
+      <form onSubmit={searchWord} className="search-form">
         <input
           type="search"
           placeholder=" search..."
@@ -35,7 +38,7 @@ const Search = () => {
         />
         <button type="submit">search</button>
       </form>
-      <h2>{wordData.name}</h2>
+      <Result results={results} />
     </div>
   )
 }
