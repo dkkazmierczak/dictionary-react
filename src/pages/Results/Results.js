@@ -1,4 +1,5 @@
 import Meaning from "./Meaning"
+import Phonetics from "../Results/Phonetics"
 import "./Result.scss"
 
 const Results = props => {
@@ -8,6 +9,7 @@ const Results = props => {
     return (
       <div className="Result">
         <div className="word">{results.word}</div>
+        <Phonetics phonetics={results.phonetics} />
         {results.meanings.map((meaning, index) => {
           return (
             <div key={index}>

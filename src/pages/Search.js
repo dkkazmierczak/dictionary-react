@@ -16,6 +16,7 @@ const Search = () => {
     setResults({
       word: data[0].word,
       meanings: data[0].meanings,
+      phonetics: data[0].phonetics,
     })
   }
 
@@ -26,7 +27,7 @@ const Search = () => {
   return (
     <div className="Search">
       <h1>Search</h1>
-      <h2>What word are you looking for?</h2>
+      <h2>What word do you wanna look up?</h2>
       <form onSubmit={searchWord} className="search-form">
         <input
           type="search"
@@ -37,9 +38,10 @@ const Search = () => {
           value={change}
         />
         <button type="submit" className="submit-button">
-          search
+          <i className="fas fa-search icon"></i>
         </button>
       </form>
+      <div className="examples">i.e. sunrise, summer, wine, water</div>
       <Results results={results} />
     </div>
   )
