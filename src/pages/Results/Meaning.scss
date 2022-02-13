@@ -1,27 +1,30 @@
 @import "/src/sass/standard.scss";
 
-.part-of-speech {
-  font-size: 26px;
-  padding: 10px 0;
-}
+.Meaning {
+  background-color: rgb(151, 235, 250, 0.2);
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  padding: 20px;
+  margin: 20px 0;
 
-.definitions {
-  .definition {
-    padding: 10px;
-    margin: 20px 0;
-    max-width: 75%;
-    border: $border;
-    border-radius: $borderRadius;
-    box-shadow: $boxShadow;
+  .part-of-speech {
+    font-size: 26px;
+    padding-bottom: 10px;
   }
 
-  .title {
-    font-weight: 900;
-    font-size: 16px;
-  }
+  .definitions {
+    .title {
+      font-weight: 900;
+      font-size: 16px;
+    }
 
-  .text {
-    font-size: 16px;
-    font-style: italic;
+    .text {
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .example {
+      padding: 10px 0;
+    }
   }
 }

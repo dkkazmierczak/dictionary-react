@@ -37,9 +37,6 @@ const Search = () => {
           onChange={handleChange}
           value={change}
         />
-        <button type="submit" className="submit-button">
-          <i className="fas fa-search icon"></i>
-        </button>
       </form>
       <div className="examples">i.e. sunrise, summer, wine, water</div>
       <Results results={results} />

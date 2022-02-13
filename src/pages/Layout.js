@@ -4,6 +4,7 @@ import "./Layout.scss"
 const Layout = () => {
   return (
     <div className="Layout">
+      <Outlet />
       <nav>
         <ul className="links">
           <li className="link-item">
@@ -23,7 +24,6 @@ const Layout = () => {
           </li>
         </ul>
       </nav>
-      <Outlet />
     </div>
   )
 }

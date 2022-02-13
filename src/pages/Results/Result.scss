@@ -3,8 +3,14 @@
 .Result {
   padding: 20px;
 
+  .name {
+    background-color: rgb(151, 235, 250, 0.2);
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+    padding: 20px;
+    margin: 20px 0;
+  }
   .word {
-    padding: 10px 0;
     font-size: 30px;
   }
 

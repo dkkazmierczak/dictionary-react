@@ -1,3 +1,5 @@
+import "./Synonyms.scss"
+
 const Synonyms = props => {
   if (props.synonyms.length) {
     return (

@@ -1,6 +1,7 @@
 @import "../sass/standard.scss";
 
 .Search {
+  margin-top: 50px;
   .search-form {
     padding: 0 20px;
   }
@@ -27,7 +28,7 @@
   .Search {
     .search-input {
       padding: 10px;
-      width: 75%;
+      width: 100%;
     }
 
     .submit-button {

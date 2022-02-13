@@ -4,7 +4,7 @@ import "./Meaning.scss"
 
 const Meaning = props => {
   return (
-    <>
+    <div className="Meaning">
       <div className="part-of-speech">{props.meaning.partOfSpeech}</div>
       <div className="definitions">
         {props.meaning.definitions.map((definition, index) => {
@@ -19,7 +19,7 @@ const Meaning = props => {
           )
         })}
       </div>
-    </>
+    </div>
   )
 }
 
