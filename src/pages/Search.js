@@ -1,6 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
-import Result from "./Result"
+import Results from "./Results/Results"
 import "./Search.scss"
 
 const Search = () => {
@@ -16,7 +16,6 @@ const Search = () => {
     setResults({
       word: data[0].word,
       meanings: data[0].meanings,
-      phonetic: data[0].phonetics[0].text,
     })
   }
 
@@ -27,6 +26,7 @@ const Search = () => {
   return (
     <div className="Search">
       <h1>Search</h1>
+      <h2>What word are you looking for?</h2>
       <form onSubmit={searchWord} className="search-form">
         <input
           type="search"
@@ -36,9 +36,11 @@ const Search = () => {
           onChange={handleChange}
           value={change}
         />
-        <button type="submit">search</button>
+        <button type="submit" className="submit-button">
+          search
+        </button>
       </form>
-      <Result results={results} />
+      <Results results={results} />
     </div>
   )
 }

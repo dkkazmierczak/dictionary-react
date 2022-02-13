@@ -1,14 +1,13 @@
 import Meaning from "./Meaning"
 import "./Result.scss"
 
-const Result = props => {
+const Results = props => {
   let results = props.results
 
   if (results) {
     return (
       <div className="Result">
         <div className="word">{results.word}</div>
-
         {results.meanings.map((meaning, index) => {
           return (
             <div key={index}>
@@ -21,4 +20,4 @@ const Result = props => {
   } else return null
 }
 
-export default Result
+export default Results
