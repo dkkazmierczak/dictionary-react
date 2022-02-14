@@ -1,12 +1,14 @@
 const Example = props => {
   if (props.example) {
     return (
-      <>
-        <div className="title">Example:</div>{" "}
+      <section>
+        <div className="title">example:</div>{" "}
         <div className="text">{props.example}</div>
-      </>
+      </section>
     )
-  } else return null
+  } else {
+    return null
+  }
 }
 
 export default Example

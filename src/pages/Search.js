@@ -26,20 +26,29 @@ const Search = () => {
 
   return (
     <div className="Search">
-      <h1>Search</h1>
-      <h2>What word do you wanna look up?</h2>
-      <form onSubmit={searchWord} className="search-form">
-        <input
-          type="search"
-          placeholder=" search..."
-          autoFocus={true}
-          className="search-input"
-          onChange={handleChange}
-          value={change}
-        />
-      </form>
-      <div className="examples">i.e. sunrise, summer, wine, water</div>
-      <Results results={results} />
+      <header>
+        <h1>Search</h1>
+        <h2>What word do you wanna look up?</h2>
+      </header>
+      <section>
+        <form onSubmit={searchWord} className="search-form">
+          <input
+            type="search"
+            placeholder=" search..."
+            autoFocus={true}
+            className="search-input"
+            onChange={handleChange}
+            value={change}
+          />
+        </form>
+
+        <div className="examples">i.e. sunrise, summer, wine, water</div>
+      </section>
+      <div className="row">
+        <div className="col-md-6">
+          <Results results={results} />
+        </div>
+      </div>
     </div>
   )
 }

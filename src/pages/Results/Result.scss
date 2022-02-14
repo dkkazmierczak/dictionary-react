@@ -1,16 +1,18 @@
 @import "/src/sass/standard.scss";
 
 .Result {
+  font-family: Poppins, sans-serif;
   padding: 20px;
 
-  .name {
-    background-color: rgb(151, 235, 250, 0.2);
+  .word {
+    background-color: white;
     border-radius: $borderRadius;
     box-shadow: $boxShadow;
     padding: 20px;
     margin: 20px 0;
   }
-  .word {
+
+  .word-name {
     font-size: 30px;
   }
 

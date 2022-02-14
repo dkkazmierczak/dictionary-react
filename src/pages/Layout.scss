@@ -1,9 +1,11 @@
 @import "../sass/standard.scss";
 
 .Layout {
+  text-align: center;
+  margin: 50px 0 100px;
   nav {
     background-color: white;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     box-shadow: $boxShadow;
@@ -29,6 +31,21 @@
     a:-webkit-any-link {
       color: rgba(0, 0, 0, 0.7);
       cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Layout {
+    text-align: left;
+    nav .links {
+      .link-item {
+        padding: 0 30px;
+      }
+
+      .icon {
+        font-size: 15px;
+      }
     }
   }
 }

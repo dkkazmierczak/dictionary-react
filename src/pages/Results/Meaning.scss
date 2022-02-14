@@ -1,30 +1,28 @@
 @import "/src/sass/standard.scss";
 
 .Meaning {
-  background-color: rgb(151, 235, 250, 0.2);
+  background-color: white;
   border-radius: $borderRadius;
   box-shadow: $boxShadow;
   padding: 20px;
   margin: 20px 0;
 
   .part-of-speech {
-    font-size: 26px;
-    padding-bottom: 10px;
+    font-size: 24px;
   }
 
-  .definitions {
-    .title {
-      font-weight: 900;
-      font-size: 16px;
-    }
+  .definitions section {
+    padding: 5px 0;
 
-    .text {
+    .title {
+      font-weight: 500;
       font-size: 16px;
       font-style: italic;
     }
 
-    .example {
-      padding: 10px 0;
+    .text {
+      font-size: 16px;
+      font-weight: 300;
     }
   }
 }

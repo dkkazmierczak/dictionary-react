@@ -1,7 +1,6 @@
 @import "../sass/standard.scss";
 
 .Search {
-  margin-top: 50px;
   .search-form {
     padding: 0 20px;
   }
@@ -9,6 +8,7 @@
   .search-input {
     padding: 20px;
     width: 50%;
+    border: 1px solid black;
     border-radius: $borderRadius;
   }
 
@@ -24,7 +24,7 @@
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
   .Search {
     .search-input {
       padding: 10px;

@@ -7,19 +7,21 @@ const Results = props => {
 
   if (results) {
     return (
-      <div className="Result">
-        <div className="name">
-          <div className="word">{results.word}</div>
-          <Phonetics phonetics={results.phonetics} />
+      <section>
+        <div className="Result">
+          <header className="word">
+            <div className="word-name">{results.word}</div>
+            <Phonetics phonetics={results.phonetics} />
+          </header>
+          {results.meanings.map((meaning, index) => {
+            return (
+              <section key={index}>
+                <Meaning meaning={meaning} />{" "}
+              </section>
+            )
+          })}
         </div>
-        {results.meanings.map((meaning, index) => {
-          return (
-            <div key={index}>
-              <Meaning meaning={meaning} />{" "}
-            </div>
-          )
-        })}
-      </div>
+      </section>
     )
   } else return null
 }
