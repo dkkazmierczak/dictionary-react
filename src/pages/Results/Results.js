@@ -1,6 +1,6 @@
 import Meaning from "./Meaning"
 import Phonetics from "../Results/Phonetics"
-import "./Result.scss"
+import "./Results.scss"
 
 const Results = props => {
   let results = props.results

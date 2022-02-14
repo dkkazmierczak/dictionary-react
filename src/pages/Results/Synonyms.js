@@ -1,14 +1,15 @@
+import "./Synonyms.scss"
+
 const Synonyms = props => {
   if (props.synonyms.length) {
     return (
       <section>
         <ul>
-          <div className="title">synonyms:</div>
           {props.synonyms.map((synonym, index) => {
             if (index <= 5) {
               return (
-                <li key={index} className="text">
-                  {synonym}
+                <li key={index}>
+                  <span className="synonym">{synonym}</span>
                 </li>
               )
             }

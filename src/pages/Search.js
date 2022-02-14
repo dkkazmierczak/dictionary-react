@@ -35,14 +35,13 @@ const Search = () => {
           <input
             type="search"
             placeholder=" search..."
-            autoFocus={true}
             className="search-input"
             onChange={handleChange}
             value={change}
           />
         </form>
 
-        <div className="examples">i.e. sunrise, summer, wine, water</div>
+        <div className="hint">i.e. sunrise, summer, wine, water</div>
       </section>
       <div className="row">
         <div className="col-md-6">

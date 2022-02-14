@@ -12,7 +12,6 @@ const Meaning = props => {
             <div key={index}>
               <hr />
               <section>
-                <div className="title">definition:</div>
                 <div className="text">{definition.definition}</div>
               </section>
               <Example example={definition.example} />

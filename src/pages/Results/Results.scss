@@ -2,6 +2,7 @@
 
 .Result {
   font-family: Poppins, sans-serif;
+  text-align: left;
   padding: 20px;
 
   .word {
@@ -14,9 +15,10 @@
 
   .word-name {
     font-size: 30px;
+    font-weight: 400;
   }
 
-  .word:first-letter {
+  .word-name:first-letter {
     text-transform: capitalize;
   }
 }

@@ -6,7 +6,7 @@
   }
 
   .search-input {
-    padding: 20px;
+    padding: 15px;
     width: 50%;
     border: 1px solid black;
     border-radius: $borderRadius;
@@ -17,9 +17,9 @@
     border-radius: $borderRadius;
   }
 
-  .examples {
-    padding: 0 20px;
-    font-size: 14px;
+  .hint {
+    padding: 5px 20px 0;
+    font-size: 12px;
     font-style: italic;
   }
 }
