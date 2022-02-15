@@ -4,13 +4,13 @@ import Results from "./Results/Results"
 import Photos from "./Results/Photos"
 import "./Search.scss"
 
-const Search = props => {
-  const [change, setChange] = useState(props.default)
+const Search = () => {
+  const [change, setChange] = useState("")
   const [results, setResults] = useState("")
   const [photos, setPhotos] = useState("")
-  const [loaded, setLoaded] = useState(false)
 
-  const searchWord = async () => {
+  const searchWord = async e => {
+    e.preventDefault()
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${change}`
     const { data } = await axios.get(apiUrl)
     console.log(data)
@@ -35,45 +35,35 @@ const Search = props => {
     setChange(event.target.value)
   }
 
-  const load = () => {
-    setLoaded(true)
-    searchWord()
-  }
+  return (
+    <div className="Search">
+      <header>
+        <h1>Search</h1>
+        <h2>What word do you wanna look up?</h2>
+      </header>
+      <section className="form-section">
+        <form onSubmit={searchWord} className="search-form">
+          <input
+            type="search"
+            placeholder="search..."
+            className="search-input"
+            onChange={handleChange}
+            value={change}
+          />
+        </form>
 
-  if (loaded) {
-    return (
-      <div className="Search">
-        <header>
-          <h1>Search</h1>
-          <h2>What word do you wanna look up?</h2>
-        </header>
-        <section className="form-section">
-          <form onSubmit={searchWord} className="search-form">
-            <input
-              type="search"
-              placeholder="search..."
-              className="search-input"
-              onChange={handleChange}
-              value={change}
-            />
-          </form>
-
-          <div className="hint">i.e. sunrise, wine, water, horse </div>
-        </section>
-        <div className="row">
-          <div className="col-md-6">
-            <Results results={results} />
-          </div>
-          <div className="col-md-6">
-            <Photos photos={photos} />
-          </div>
+        <div className="hint">i.e. sunrise, wine, water, horse </div>
+      </section>
+      <div className="row">
+        <div className="col-md-6">
+          <Results results={results} />
+        </div>
+        <div className="col-md-6">
+          <Photos photos={photos} />
         </div>
       </div>
-    )
-  } else {
-    load()
-    return "Loading..."
-  }
+    </div>
+  )
 }
 
 export default Search
