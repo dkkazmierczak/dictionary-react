@@ -1,7 +1,6 @@
 import "./Photos.scss"
 
 const Photos = props => {
-  console.log(props.photos)
   if (props.photos) {
     return (
       <div className="Photos row">
@@ -9,21 +8,31 @@ const Photos = props => {
           {props.photos.map((photo, index) => {
             if (index === 0) {
               return (
-                <img
-                  key={index}
-                  src={photo.src.landscape}
-                  className="photo"
-                  alt={photo.alt}
-                />
+                <a
+                  href={photo.src.original}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}>
+                  <img
+                    src={photo.src.landscape}
+                    className="photo"
+                    alt={photo.alt}
+                  />
+                </a>
               )
-            } else if (index > 0 && index <= 5) {
+            } else if (index > 0 && index <= 3) {
               return (
-                <img
-                  key={index}
-                  src={photo.src.portrait}
-                  className="photo"
-                  alt={photo.alt}
-                />
+                <a
+                  href={photo.src.original}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}>
+                  <img
+                    src={photo.src.portrait}
+                    className="photo"
+                    alt={photo.alt}
+                  />
+                </a>
               )
             }
             return null
@@ -31,23 +40,33 @@ const Photos = props => {
         </div>
         <div className="col-6 p-0">
           {props.photos.map((photo, index) => {
-            if (index > 5 && index <= 10) {
+            if (index > 3 && index <= 6) {
               return (
-                <img
-                  key={index}
-                  src={photo.src.portrait}
-                  className="photo"
-                  alt={photo.alt}
-                />
+                <a
+                  href={photo.src.original}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}>
+                  <img
+                    src={photo.src.portrait}
+                    className="photo"
+                    alt={photo.alt}
+                  />
+                </a>
               )
-            } else if (index === 11) {
+            } else if (index === 7) {
               return (
-                <img
-                  key={index}
-                  src={photo.src.landscape}
-                  className="photo"
-                  alt={photo.alt}
-                />
+                <a
+                  href={photo.src.original}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}>
+                  <img
+                    src={photo.src.landscape}
+                    className="photo"
+                    alt={photo.alt}
+                  />
+                </a>
               )
             }
             return null

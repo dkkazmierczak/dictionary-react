@@ -4,6 +4,8 @@
   font-family: Poppins, sans-serif;
   text-align: left;
   padding: 20px;
+  width: 85%;
+  margin: 0 auto;
 
   .word {
     background-color: white;
@@ -20,5 +22,11 @@
 
   .word-name:first-letter {
     text-transform: capitalize;
+  }
+}
+
+@media (max-width: 768px) {
+  .Result {
+    width: 100%;
   }
 }
