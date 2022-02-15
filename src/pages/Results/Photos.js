@@ -9,11 +9,21 @@ const Photos = props => {
           {props.photos.map((photo, index) => {
             if (index === 0) {
               return (
-                <img key={index} src={photo.src.landscape} className="photo" />
+                <img
+                  key={index}
+                  src={photo.src.landscape}
+                  className="photo"
+                  alt={photo.alt}
+                />
               )
             } else if (index > 0 && index <= 5) {
               return (
-                <img key={index} src={photo.src.portrait} className="photo" />
+                <img
+                  key={index}
+                  src={photo.src.portrait}
+                  className="photo"
+                  alt={photo.alt}
+                />
               )
             }
             return null
@@ -23,11 +33,21 @@ const Photos = props => {
           {props.photos.map((photo, index) => {
             if (index > 5 && index <= 10) {
               return (
-                <img key={index} src={photo.src.portrait} className="photo" />
+                <img
+                  key={index}
+                  src={photo.src.portrait}
+                  className="photo"
+                  alt={photo.alt}
+                />
               )
             } else if (index === 11) {
               return (
-                <img key={index} src={photo.src.landscape} className="photo" />
+                <img
+                  key={index}
+                  src={photo.src.landscape}
+                  className="photo"
+                  alt={photo.alt}
+                />
               )
             }
             return null
