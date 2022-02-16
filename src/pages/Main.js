@@ -8,7 +8,7 @@ const Main = () => {
     <div className="Main">
       <header>
         <h1>Dictionary</h1>
-        <h2>Check interesting words for today</h2>
+        <h2>An interesting word for today:</h2>
       </header>
       <section>
         <div className="image-gallery">

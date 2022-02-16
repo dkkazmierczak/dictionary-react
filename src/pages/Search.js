@@ -25,7 +25,7 @@ const Search = props => {
 
     const pexelsApiKey =
       "563492ad6f917000010000014b1eb97b57ee4008a8c12bb85028b02f"
-    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${change}`
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${change}&color=gray`
     const picturesData = await axios.get(pexelsApiUrl, {
       headers: { Authorization: `Bearer ${pexelsApiKey}` },
     })
@@ -63,17 +63,17 @@ const Search = props => {
             value={change}
           />
         </form>
-        <div className="hint">i.e. sunrise, wine, water, horse </div>
+        <div className="hint">i.e. sunrise, wine, book, horse </div>
       </section>
       {loading && (!results || !photos) ? (
         "Loading..."
       ) : (
         <div className="row">
           <div className="col-md-6">
-            <Results results={results} />
+            <Photos photos={photos} />
           </div>
           <div className="col-md-6">
-            <Photos photos={photos} />
+            <Results results={results} />
           </div>
         </div>
       )}

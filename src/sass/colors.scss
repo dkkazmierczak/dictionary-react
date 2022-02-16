@@ -1,4 +1,8 @@
-$bodyBgColor: white;
+$bodyBgColor: radial-gradient(
+  circle at 0% 0.5%,
+  rgb(241, 241, 242) 0.1%,
+  rgb(224, 226, 228) 100.2%
+);
 $mainColor: black;
 $secondColor: #423b67;
 $thirdColor: rgb(102, 46, 237);
