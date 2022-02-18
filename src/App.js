@@ -83,6 +83,13 @@ function App() {
     "nature",
     "soda",
     "drink",
+    "eyes",
+    "lashes",
+    "makeup",
+    "vegetables",
+    "vegan",
+    "vegetarian",
+    "sushi",
   ]
 
   const randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)]

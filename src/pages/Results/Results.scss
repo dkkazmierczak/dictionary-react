@@ -18,10 +18,33 @@
   .word-name {
     font-size: 30px;
     font-weight: 400;
+    padding-left: 10px;
   }
 
   .word-name:first-letter {
     text-transform: capitalize;
+  }
+
+  .icon {
+    position: relative;
+    top: 3px;
+  }
+
+  .sound-icon {
+    border: 1px solid #919191;
+    padding: 10px;
+    border-radius: 50%;
+    transition: $transition;
+  }
+
+  a:-webkit-any-link {
+    color: #919191;
+    cursor: pointer;
+  }
+
+  .sound-icon:hover {
+    background-color: #919191;
+    color: white;
   }
 }
 

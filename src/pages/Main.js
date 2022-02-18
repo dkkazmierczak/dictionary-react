@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import Results from "./Results/Results"
 import Photos from "./Results/Photos"
+import Loading from "../Loading"
 import "./Main.scss"
 
 const Main = props => {
@@ -44,7 +45,7 @@ const Main = props => {
         <h2>An interesting word for today:</h2>
       </header>
       {loading && (!results || !photos) ? (
-        "Loading..."
+        <Loading />
       ) : (
         <div className="row">
           <div className="col-md-6">

@@ -1,5 +1,7 @@
 import Meaning from "./Meaning"
 import Phonetics from "../Results/Phonetics"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faVolumeLow } from "@fortawesome/free-solid-svg-icons"
 import "./Results.scss"
 
 const Results = props => {
@@ -10,7 +12,18 @@ const Results = props => {
       <section>
         <div className="Result">
           <header className="word">
-            <div className="word-name">{results.word}</div>
+            <span className="icon">
+              <a
+                href={results.phonetics[0].audio}
+                target="_blank"
+                rel="noreferrer">
+                <FontAwesomeIcon
+                  icon={faVolumeLow}
+                  className="icon sound-icon"
+                />
+              </a>
+            </span>
+            <span className="word-name">{results.word}</span>
             <Phonetics phonetics={results.phonetics} />
           </header>
           {results.meanings.map((meaning, index) => {
