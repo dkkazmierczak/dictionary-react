@@ -3,6 +3,7 @@ import { useState } from "react"
 import axios from "axios"
 import Results from "./Results/Results"
 import Photos from "./Results/Photos"
+import Loading from "../Loading"
 import "./Search.scss"
 
 const Search = () => {
@@ -61,7 +62,7 @@ const Search = () => {
         <div className="hint">i.e. sunrise, wine, book, horse </div>
       </section>
       {loading && (!results || !photos) ? (
-        "Loading..."
+        <Loading />
       ) : (
         <div className="row">
           <div className="col-md-6">
