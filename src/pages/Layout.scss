@@ -2,12 +2,12 @@
 
 .Layout {
   text-align: center;
-  margin: 50px 0 100px;
+  margin: 100px 0;
   nav {
-    background-color: white;
+    background-color: transparent;
     position: fixed;
     left: 0;
-    bottom: 0;
+    top: 0;
     box-shadow: $boxShadow;
     width: 100%;
 
@@ -37,14 +37,20 @@
 
 @media (max-width: 768px) {
   .Layout {
+    margin: 50px 0;
     text-align: left;
-    nav .links {
-      .link-item {
-        padding: 0 30px;
-      }
+    nav {
+      background-color: white;
+      top: auto;
+      bottom: 0;
+      .links {
+        .link-item {
+          padding: 0 30px;
+        }
 
-      .icon {
-        font-size: 15px;
+        .icon {
+          font-size: 15px;
+        }
       }
     }
   }

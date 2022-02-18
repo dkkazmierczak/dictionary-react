@@ -69,6 +69,20 @@ function App() {
     "word",
     "world",
     "country",
+    "village",
+    "farm",
+    "vikings",
+    "candy",
+    "cake",
+    "crust",
+    "croissant",
+    "crescent",
+    "twilight",
+    "infinity",
+    "endless",
+    "nature",
+    "soda",
+    "drink",
   ]
 
   const randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)]
@@ -79,7 +93,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Main />} />
+              <Route index element={<Main default={randomWord} />} />
               <Route path="search" element={<Search default={randomWord} />} />
               <Route path="contact" element={<Contact />} />
             </Route>

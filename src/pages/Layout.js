@@ -1,4 +1,10 @@
 import { Outlet, Link } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faHome,
+  faMagnifyingGlass,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons"
 import "./Layout.scss"
 
 const Layout = () => {
@@ -9,17 +15,17 @@ const Layout = () => {
         <ul className="links">
           <li className="link-item">
             <Link to="/">
-              <i className="fas fa-home icon"></i>
+              <FontAwesomeIcon className="icon" icon={faHome} />
             </Link>
           </li>
           <li className="link-item">
             <Link to="/search">
-              <i className="fas fa-search icon"></i>
+              <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
             </Link>
           </li>
           <li className="link-item">
             <Link to="/contact">
-              <i className="fas fa-user-circle icon"></i>
+              <FontAwesomeIcon className="icon" icon={faUser} />
             </Link>
           </li>
         </ul>

@@ -1,28 +1,60 @@
-import firstImage from "../images/1.jpg"
-import secondImage from "../images/2.jpg"
-import thirdImage from "../images/3.jpg"
+/* eslint-disable */
+import { useEffect, useState } from "react"
+import axios from "axios"
+import Results from "./Results/Results"
+import Photos from "./Results/Photos"
 import "./Main.scss"
 
-const Main = () => {
+const Main = props => {
+  const word = props.default
+  const [results, setResults] = useState("")
+  const [photos, setPhotos] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  const getData = async () => {
+    setLoading(true)
+    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+    const { data } = await axios.get(apiUrl)
+
+    setResults({
+      word: data[0].word,
+      meanings: data[0].meanings,
+      phonetics: data[0].phonetics,
+    })
+
+    const pexelsApiKey =
+      "563492ad6f917000010000014b1eb97b57ee4008a8c12bb85028b02f"
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&color=gray`
+    const picturesData = await axios.get(pexelsApiUrl, {
+      headers: { Authorization: `Bearer ${pexelsApiKey}` },
+    })
+
+    setPhotos(picturesData.data.photos)
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <div className="Main">
       <header>
         <h1>Dictionary</h1>
         <h2>An interesting word for today:</h2>
       </header>
-      <section>
-        <div className="image-gallery">
-          <div className="wrapper">
-            <div className="image-container">
-              <img src={firstImage} alt="Profile" className="image" />
-
-              <img src={secondImage} alt="Profile" className="image" />
-
-              <img src={thirdImage} alt="Profile" className="image" />
-            </div>
+      {loading && (!results || !photos) ? (
+        "Loading..."
+      ) : (
+        <div className="row">
+          <div className="col-md-6">
+            <Photos photos={photos} />
+          </div>
+          <div className="col-md-6">
+            <Results results={results} />
           </div>
         </div>
-      </section>
+      )}
     </div>
   )
 }
