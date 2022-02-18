@@ -1,7 +1,7 @@
 import "./Synonyms.scss"
 
 const Synonyms = props => {
-  if (props.synonyms.length) {
+  if (props.synonyms) {
     return (
       <section>
         <ul>

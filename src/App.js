@@ -27,7 +27,6 @@ function App() {
     "cat",
     "pizza",
     "dog",
-    "italy",
     "birthday",
     "sunset",
     "friend",
@@ -67,6 +66,9 @@ function App() {
     "seawater",
     "saltwater",
     "jellyfish",
+    "word",
+    "world",
+    "country",
   ]
 
   const randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)]

@@ -15,7 +15,6 @@ const Search = props => {
     setLoading(true)
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${change}`
     const { data } = await axios.get(apiUrl)
-    console.log(data)
 
     setResults({
       word: data[0].word,
