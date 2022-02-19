@@ -101,7 +101,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Main default={randomWord} />} />
-              <Route path="search" element={<Search default={randomWord} />} />
+              <Route path="search" element={<Search />} />
               <Route path="contact" element={<Contact />} />
             </Route>
           </Routes>

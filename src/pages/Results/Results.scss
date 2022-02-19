@@ -8,6 +8,8 @@
   margin: 0 auto;
 
   .word {
+    display: flex;
+    align-items: center;
     background-color: white;
     border-radius: $borderRadius;
     box-shadow: $boxShadow;
@@ -15,22 +17,27 @@
     margin: 20px 0;
   }
 
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
   .word-name {
     font-size: 30px;
     font-weight: 400;
-    padding-left: 10px;
   }
 
   .word-name:first-letter {
     text-transform: capitalize;
   }
 
-  .icon {
-    position: relative;
-    top: 3px;
-  }
-
   .sound-icon {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #919191;
     padding: 10px;
     border-radius: 50%;
@@ -42,7 +49,7 @@
     cursor: pointer;
   }
 
-  .sound-icon:hover {
+  .sound-icon:not(:disabled):hover {
     background-color: #919191;
     color: white;
   }

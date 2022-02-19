@@ -1,6 +1,6 @@
 @import "/src/sass/standard.scss";
 
-.Meaning {
+.meaning {
   background-color: white;
   border-radius: $borderRadius;
   box-shadow: $boxShadow;
@@ -9,24 +9,50 @@
 
   .part-of-speech {
     font-size: 24px;
+    font-weight: 400;
   }
 
-  .definitions section {
+  .content {
     padding: 5px 0;
 
-    .title {
-      font-weight: 500;
-      font-size: 16px;
-      font-style: italic;
-    }
+    .definition-container {
+      padding: 15px 0;
 
-    .text {
-      font-size: 16px;
-      font-weight: 300;
-    }
+      &:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+      }
 
-    .text::first-letter {
-      text-transform: capitalize;
+      .definition {
+        font-size: 16px;
+        font-weight: 300;
+
+        &:first-letter {
+          text-transform: capitalize;
+        }
+      }
+
+      .example {
+        margin: 10px 0;
+        font-size: 14px;
+        font-style: italic;
+        opacity: 0.7;
+        font-weight: 300;
+
+        &:first-letter {
+          text-transform: capitalize;
+        }
+      }
+
+      li {
+        display: inline;
+      }
+
+      .synonym {
+        font-size: 14px;
+        opacity: 0.7;
+        font-weight: 300;
+        padding-right: 20px;
+      }
     }
   }
 }

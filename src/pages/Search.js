@@ -25,7 +25,7 @@ const Search = () => {
 
     const pexelsApiKey =
       "563492ad6f917000010000014b1eb97b57ee4008a8c12bb85028b02f"
-    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${change}&color=gray`
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${change}&color=gray&per_page=10`
     const picturesData = await axios.get(pexelsApiUrl, {
       headers: { Authorization: `Bearer ${pexelsApiKey}` },
     })
@@ -61,17 +61,20 @@ const Search = () => {
         </form>
         <div className="hint">i.e. sunrise, wine, book, horse </div>
       </section>
-      {loading && (!results || !photos) ? (
+      {loading ? (
         <Loading />
       ) : (
-        <div className="row">
-          <div className="col-md-6">
-            <Photos photos={photos} />
+        results &&
+        photos && (
+          <div className="row">
+            <div className="col-md-6">
+              <Photos photos={photos} />
+            </div>
+            <div className="col-md-6">
+              <Results results={results} />
+            </div>
           </div>
-          <div className="col-md-6">
-            <Results results={results} />
-          </div>
-        </div>
+        )
       )}
     </div>
   )

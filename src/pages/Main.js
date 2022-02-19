@@ -8,7 +8,7 @@ import "./Main.scss"
 
 const Main = props => {
   const word = props.default
-  const [results, setResults] = useState("")
+  const [results, setResults] = useState(null)
   const [photos, setPhotos] = useState("")
   const [loading, setLoading] = useState(false)
 
@@ -25,7 +25,7 @@ const Main = props => {
 
     const pexelsApiKey =
       "563492ad6f917000010000014b1eb97b57ee4008a8c12bb85028b02f"
-    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&color=gray`
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&color=gray&per_page=10`
     const picturesData = await axios.get(pexelsApiUrl, {
       headers: { Authorization: `Bearer ${pexelsApiKey}` },
     })
@@ -44,9 +44,7 @@ const Main = props => {
         <h1>Dictionary</h1>
         <h2>An interesting word for today:</h2>
       </header>
-      {loading && (!results || !photos) ? (
-        <Loading />
-      ) : (
+      {!loading && results && photos ? (
         <div className="row">
           <div className="col-md-6">
             <Photos photos={photos} />
@@ -55,6 +53,8 @@ const Main = props => {
             <Results results={results} />
           </div>
         </div>
+      ) : (
+        <Loading />
       )}
     </div>
   )

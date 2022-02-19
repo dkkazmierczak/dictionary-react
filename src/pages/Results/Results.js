@@ -1,36 +1,36 @@
 import Meaning from "./Meaning"
-import Phonetics from "../Results/Phonetics"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faVolumeLow } from "@fortawesome/free-solid-svg-icons"
 import "./Results.scss"
 
 const Results = props => {
-  let results = props.results
+  const results = props.results
+
+  const audio = new Audio(results.phonetics[0].audio)
+  const playAudio = () => audio.play()
 
   if (results) {
     return (
       <section>
         <div className="Result">
           <header className="word">
-            <span className="icon">
-              <a
-                href={results.phonetics[0].audio}
-                target="_blank"
-                rel="noreferrer">
-                <FontAwesomeIcon
-                  icon={faVolumeLow}
-                  className="icon sound-icon"
-                />
-              </a>
-            </span>
-            <span className="word-name">{results.word}</span>
-            <Phonetics phonetics={results.phonetics} />
+            <button
+              className="sound-icon"
+              disabled={!results.phonetics[0].audio}
+              onClick={playAudio}>
+              <FontAwesomeIcon icon={faVolumeLow} />
+            </button>
+            <div className="text-wrapper">
+              <div className="word-name">{results.word}</div>
+              <div className="phonetics">{results.phonetics[0].text}</div>
+            </div>
           </header>
           {results.meanings.map((meaning, index) => {
             return (
-              <section key={index}>
+              <div key={index}>
                 <Meaning meaning={meaning} />{" "}
-              </section>
+              </div>
             )
           })}
         </div>
