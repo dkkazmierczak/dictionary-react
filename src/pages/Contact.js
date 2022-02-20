@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="about-wrapper">
           <header>
             <h1>Dominika</h1>
-            <h2>Basen in Halden, Norway</h2>
+            <h2>Based in Halden, Norway</h2>
           </header>
           <section>
             <div className="links-wrapper">

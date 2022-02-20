@@ -8,12 +8,24 @@ body {
 
 h1 {
   font-size: 46px;
-  padding: 20px !important;
+  margin: 10px;
 }
 
 h2 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 20px !important;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    margin: 10px 20px;
+  }
+
+  h2 {
+    font-size: 12px;
+    margin: 10px 20px;
+  }
 }

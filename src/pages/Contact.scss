@@ -14,16 +14,21 @@
     }
 
     .links-wrapper {
-      margin: 20px 0;
+      margin: 50px 0;
+
       .portfolio-link,
       .contact-link {
-        border: 2px solid black;
+        border: 1px solid black;
         width: 30%;
         display: block;
         margin: 5px auto;
         padding: 20px;
         border-radius: 5px;
         text-transform: uppercase;
+
+        a {
+          font-size: 14px;
+        }
       }
 
       .portfolio-link {
@@ -39,6 +44,23 @@
         a:-webkit-any-link {
           color: black;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    .contact-wrapper {
+      .links-wrapper {
+        .portfolio-link,
+        .contact-link {
+          padding: 10px;
+        }
+
+        a {
+          font-size: 12px;
         }
       }
     }
