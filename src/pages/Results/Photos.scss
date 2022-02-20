@@ -1,6 +1,6 @@
 @import "/src/sass/standard.scss";
 
-.Photos {
+.photos {
   padding: 35px 20px;
 
   .photo {
@@ -10,7 +10,7 @@
 }
 
 @media (max-width: 768px) {
-  .Photos {
+  .photos {
     padding: 30px;
   }
 }

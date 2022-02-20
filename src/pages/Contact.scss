@@ -1,34 +1,45 @@
 @import "../sass/standard.scss";
 
-.Contact {
+.contact {
   text-align: center;
 
-  .image-container {
-    padding: 20px;
-
-    .image {
-      height: 200px;
-      border-radius: 50%;
-    }
-  }
-  .links {
-    .portfolio-link,
-    .contact-link {
-      border: 2px solid black;
-      width: 80%;
-      display: block;
-      margin: 5px auto;
+  .contact-wrapper {
+    .image-wrapper {
       padding: 20px;
-      border-radius: 5px;
-      text-transform: uppercase;
+
+      .image {
+        height: 200px;
+        border-radius: 50%;
+      }
     }
 
-    .portfolio-link {
-      background: black;
+    .links-wrapper {
+      margin: 20px 0;
+      .portfolio-link,
+      .contact-link {
+        border: 2px solid black;
+        width: 30%;
+        display: block;
+        margin: 5px auto;
+        padding: 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+      }
 
-      a:-webkit-any-link {
-        color: white;
-        cursor: pointer;
+      .portfolio-link {
+        background: black;
+
+        a:-webkit-any-link {
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      .contact-link {
+        a:-webkit-any-link {
+          color: black;
+          cursor: pointer;
+        }
       }
     }
   }

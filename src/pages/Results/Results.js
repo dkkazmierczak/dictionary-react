@@ -13,8 +13,8 @@ const Results = props => {
   if (results) {
     return (
       <section>
-        <div className="Result">
-          <header className="word">
+        <div className="results">
+          <div className="wrapper">
             <button
               className="sound-icon"
               disabled={!results.phonetics[0].audio}
@@ -22,10 +22,10 @@ const Results = props => {
               <FontAwesomeIcon icon={faVolumeLow} />
             </button>
             <div className="text-wrapper">
-              <div className="word-name">{results.word}</div>
+              <div className="word">{results.word}</div>
               <div className="phonetics">{results.phonetics[0].text}</div>
             </div>
-          </header>
+          </div>
           {results.meanings.map((meaning, index) => {
             return (
               <div key={index}>

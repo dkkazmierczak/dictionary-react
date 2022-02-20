@@ -3,8 +3,8 @@ import "./Loading.scss"
 
 const Loading = () => {
   return (
-    <div className="Loading">
-      <div className="loading-icon">
+    <div className="loading">
+      <div className="icon">
         <Oval />
       </div>
       <div className="text">Loading...</div>

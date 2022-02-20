@@ -1,24 +1,19 @@
 @import "../sass/standard.scss";
 
-.Search {
+.search {
   .form-section {
     padding: 20px 0 40px;
   }
 
-  .search-form {
+  form {
     padding: 0 20px;
-  }
 
-  .search-input {
-    padding: 15px;
-    width: 50%;
-    border: 1px solid black;
-    border-radius: $borderRadius;
-  }
-
-  .submit-button {
-    padding: 20px;
-    border-radius: $borderRadius;
+    .form-input {
+      padding: 15px;
+      width: 50%;
+      border: 1px solid black;
+      border-radius: $borderRadius;
+    }
   }
 
   .hint {
@@ -29,15 +24,12 @@
 }
 
 @media (max-width: 768px) {
-  .Search {
-    .search-input {
-      padding: 10px;
-      width: 100%;
-    }
-
-    .submit-button {
-      padding: 10px;
-      border-radius: $borderRadius;
+  .search {
+    form {
+      .form-input {
+        padding: 10px;
+        width: 100%;
+      }
     }
   }
 }

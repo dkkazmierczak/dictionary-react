@@ -44,17 +44,17 @@ const Search = () => {
   }
 
   return (
-    <div className="Search">
+    <div className="search">
       <header>
         <h1>Search</h1>
         <h2>What word do you wanna look up?</h2>
       </header>
       <section className="form-section">
-        <form onSubmit={searchWord} className="search-form">
+        <form onSubmit={searchWord}>
           <input
             type="search"
             placeholder="search..."
-            className="search-input"
+            className="form-input"
             onChange={handleChange}
             value={change}
           />

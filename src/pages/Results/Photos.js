@@ -3,7 +3,7 @@ import "./Photos.scss"
 const Photos = props => {
   if (props.photos) {
     return (
-      <div className="Photos row">
+      <div className="photos row">
         <div className="col-6 p-0">
           {props.photos.map((photo, index) => {
             if (index === 0) {

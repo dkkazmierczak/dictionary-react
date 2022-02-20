@@ -1,13 +1,13 @@
 @import "/src/sass/standard.scss";
 
-.Result {
+.results {
   font-family: Poppins, sans-serif;
   text-align: left;
   padding: 20px;
   width: 85%;
   margin: 0 auto;
 
-  .word {
+  .wrapper {
     display: flex;
     align-items: center;
     background-color: white;
@@ -15,48 +15,47 @@
     box-shadow: $boxShadow;
     padding: 20px;
     margin: 20px 0;
-  }
 
-  .text-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-  }
+    .sound-icon {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #919191;
+      padding: 10px;
+      border-radius: 50%;
+      transition: $transition;
+    }
 
-  .word-name {
-    font-size: 30px;
-    font-weight: 400;
-  }
+    .sound-icon:not(:disabled):hover {
+      background-color: #919191;
+      color: white;
+    }
 
-  .word-name:first-letter {
-    text-transform: capitalize;
-  }
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
 
-  .sound-icon {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #919191;
-    padding: 10px;
-    border-radius: 50%;
-    transition: $transition;
-  }
+      .word {
+        font-size: 30px;
+        font-weight: 400;
 
-  a:-webkit-any-link {
-    color: #919191;
-    cursor: pointer;
-  }
+        &:first-letter {
+          text-transform: capitalize;
+        }
+      }
 
-  .sound-icon:not(:disabled):hover {
-    background-color: #919191;
-    color: white;
+      .phonetics {
+        color: #919191;
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
-  .Result {
+  .results {
     width: 100%;
   }
 }
