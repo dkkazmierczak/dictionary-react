@@ -2,11 +2,11 @@
 
 .search {
   .form-section {
-    padding: 20px 0 40px;
+    margin-top: 40px;
   }
 
   form {
-    padding: 0 20px;
+    margin: 0 20px;
 
     .form-input {
       padding: 15px;
@@ -17,7 +17,7 @@
   }
 
   .hint {
-    padding: 5px 20px 0;
+    margin: 5px 25px 0;
     font-size: 12px;
     font-style: italic;
   }
@@ -25,6 +25,10 @@
 
 @media (max-width: 768px) {
   .search {
+    .form-section {
+      margin: 20px 0;
+    }
+
     form {
       .form-input {
         padding: 10px;

@@ -1,15 +1,19 @@
 @import "../sass/standard.scss";
 
 .contact {
+  display: flex;
+  height: 500px;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 
   .contact-wrapper {
     .image-wrapper {
-      padding: 20px;
-
       .image {
-        height: 200px;
-        border-radius: 50%;
+        height: 320px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
       }
     }
 
@@ -19,10 +23,10 @@
       .portfolio-link,
       .contact-link {
         border: 1px solid black;
-        width: 30%;
+        width: 100px;
         display: block;
         margin: 5px auto;
-        padding: 20px;
+        padding: 10px;
         border-radius: 5px;
         text-transform: uppercase;
 
@@ -52,7 +56,14 @@
 
 @media (max-width: 768px) {
   .contact {
+    display: block;
     .contact-wrapper {
+      .image-wrapper {
+        .image {
+          height: 200px;
+          padding: 10px;
+        }
+      }
       .links-wrapper {
         .portfolio-link,
         .contact-link {

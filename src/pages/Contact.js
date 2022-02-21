@@ -4,13 +4,17 @@ import "./Contact.scss"
 const Contact = () => {
   return (
     <div className="contact">
-      <div className="contact-wrapper">
-        <section className="image-wrapper">
+      <div className="contact-wrapper row">
+        <section className="image-wrapper col-md-6">
           <img src={profile} alt="Profile" className="image" />
         </section>
-        <div className="about-wrapper">
+        <div className="about-wrapper col-md-6">
           <header>
-            <h1>Dominika</h1>
+            <h1>
+              Dominika
+              <br />
+              Kaźmierczak
+            </h1>
             <h2>Based in Halden, Norway</h2>
           </header>
           <section>

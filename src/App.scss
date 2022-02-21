@@ -9,13 +9,18 @@ body {
 h1 {
   font-size: 46px;
   margin: 10px;
+  font-weight: 400;
 }
 
 h2 {
   font-size: 14px;
-  font-weight: 700;
   text-transform: uppercase;
   margin: 10px;
+  font-weight: 400;
+}
+
+.results-wrapper {
+  margin-top: 60px;
 }
 
 @media (max-width: 768px) {
@@ -27,5 +32,9 @@ h2 {
   h2 {
     font-size: 12px;
     margin: 10px 20px;
+  }
+
+  .results-wrapper {
+    margin-top: 20px;
   }
 }

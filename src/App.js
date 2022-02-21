@@ -44,7 +44,6 @@ function App() {
     "feeling",
     "picture",
     "mathematics",
-    "coding",
     "activity",
     "adventure",
     "experience",
@@ -96,17 +95,15 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Main default={randomWord} />} />
-              <Route path="search" element={<Search />} />
-              <Route path="contact" element={<Contact />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Main default={randomWord} />} />
+            <Route path="search" element={<Search />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

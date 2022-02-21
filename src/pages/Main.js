@@ -43,18 +43,20 @@ const Main = props => {
         <h1>Dictionary</h1>
         <h2>An interesting word for today:</h2>
       </header>
-      {!loading && results && photos ? (
-        <div className="row">
-          <div className="col-md-6">
-            <Photos photos={photos} />
+      <div className="results-wrapper">
+        {!loading && results && photos ? (
+          <div className="row">
+            <div className="col-md-6 p-0">
+              <Photos photos={photos} />
+            </div>
+            <div className="col-md-6 p-0">
+              <Results results={results} />
+            </div>
           </div>
-          <div className="col-md-6">
-            <Results results={results} />
-          </div>
-        </div>
-      ) : (
-        <Loading />
-      )}
+        ) : (
+          <Loading />
+        )}
+      </div>
     </>
   )
 }

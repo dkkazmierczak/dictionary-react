@@ -61,21 +61,23 @@ const Search = () => {
         </form>
         <div className="hint">i.e. sunrise, wine, book, horse </div>
       </section>
-      {loading ? (
-        <Loading />
-      ) : (
-        results &&
-        photos && (
-          <div className="row">
-            <div className="col-md-6">
-              <Photos photos={photos} />
+      <div className="results-wrapper">
+        {loading ? (
+          <Loading />
+        ) : (
+          results &&
+          photos && (
+            <div className="row">
+              <div className="col-md-6 p-0">
+                <Photos photos={photos} />
+              </div>
+              <div className="col-md-6 p-0">
+                <Results results={results} />
+              </div>
             </div>
-            <div className="col-md-6">
-              <Results results={results} />
-            </div>
-          </div>
-        )
-      )}
+          )
+        )}
+      </div>
     </div>
   )
 }
