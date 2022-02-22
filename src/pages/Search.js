@@ -20,7 +20,7 @@ const Search = () => {
     setResults({
       word: data[0].word,
       meanings: data[0].meanings,
-      phonetics: data[0].phonetics,
+      phonetics: data[0].phonetics.length ? data[0].phonetics : null,
     })
 
     const pexelsApiKey =
