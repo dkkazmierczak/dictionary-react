@@ -14,12 +14,13 @@ const Contact = () => {
               Dominika
               <br />
               Kaźmierczak
+              <div className="about">Front-end developer</div>
             </h1>
             <h2>Based in Halden, Norway</h2>
           </header>
           <section>
             <div className="links-wrapper">
-              <div className="portfolio-link">
+              <button className="portfolio-link">
                 {" "}
                 <a
                   href="https://dkkazmierczak.com"
@@ -27,15 +28,15 @@ const Contact = () => {
                   rel="noreferrer">
                   Website
                 </a>
-              </div>
-              <div className="contact-link">
+              </button>
+              <button className="contact-link">
                 <a
                   href="mailto:dkl.kazmierczk@gmail.com"
                   target="_blank"
                   rel="noreferrer">
                   e-mail
                 </a>
-              </div>
+              </button>
             </div>
           </section>
         </div>

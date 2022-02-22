@@ -6,14 +6,21 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  .about-wrapper {
+    .about {
+      color: rgb(92, 92, 92);
+      font-size: 28px;
+      margin: 10px 0;
+    }
+  }
 
   .contact-wrapper {
     .image-wrapper {
       .image {
         height: 320px;
-        padding: 20px;
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: white;
+        box-shadow: $boxShadow;
       }
     }
 
@@ -22,13 +29,14 @@
 
       .portfolio-link,
       .contact-link {
-        border: 1px solid black;
+        border: 1px solid rgb(92, 92, 92);
         width: 100px;
         display: block;
         margin: 5px auto;
         padding: 10px;
         border-radius: 5px;
         text-transform: uppercase;
+        transition: all 150ms ease-in-out;
 
         a {
           font-size: 14px;
@@ -36,11 +44,15 @@
       }
 
       .portfolio-link {
-        background: black;
+        background: rgb(92, 92, 92);
 
         a:-webkit-any-link {
           color: white;
           cursor: pointer;
+        }
+
+        &:hover {
+          background: black;
         }
       }
 
@@ -57,11 +69,19 @@
 @media (max-width: 768px) {
   .contact {
     display: block;
+
+    .about-wrapper {
+      margin: 20px 0;
+      .about {
+        color: rgb(92, 92, 92);
+        font-size: 28px;
+        margin: 10px 0;
+      }
+    }
     .contact-wrapper {
       .image-wrapper {
         .image {
           height: 200px;
-          padding: 10px;
         }
       }
       .links-wrapper {
