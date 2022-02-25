@@ -1,6 +1,7 @@
 @import "../sass/standard.scss";
 
 .search {
+  margin: 140px;
   .form-section {
     margin-top: 40px;
   }
@@ -25,6 +26,7 @@
 
 @media (max-width: 768px) {
   .search {
+    margin: 80px 30px;
     .form-section {
       margin: 20px 0;
     }

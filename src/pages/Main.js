@@ -4,6 +4,7 @@ import axios from "axios"
 import Results from "./Results/Results"
 import Photos from "./Results/Photos"
 import Loading from "../Loading"
+import "./Main.scss"
 
 const Main = props => {
   const word = props.default
@@ -38,7 +39,7 @@ const Main = props => {
   }, [])
 
   return (
-    <>
+    <div className="main">
       <header>
         <h1>Dictionary</h1>
         <h2>An interesting word for today:</h2>
@@ -57,7 +58,7 @@ const Main = props => {
           <Loading />
         )}
       </div>
-    </>
+    </div>
   )
 }
 

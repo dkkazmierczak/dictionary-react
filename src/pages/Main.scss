@@ -1,0 +1,11 @@
+@import "/src/sass/standard.scss";
+
+.main {
+  margin: 140px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 80px 30px;
+  }
+}
