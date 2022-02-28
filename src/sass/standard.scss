@@ -37,6 +37,16 @@ h2 {
   margin-top: 60px;
 }
 
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 36px;

@@ -78,9 +78,16 @@
     }
   }
 }
-@media (max-width: 1190px) {
+@media (max-width: 1024px) {
   .contact {
     padding: 8vh;
+    .contact-wrapper {
+      .about-wrapper {
+        .about {
+          font-size: 24px;
+        }
+      }
+    }
   }
 }
 @media (max-width: 768px) {

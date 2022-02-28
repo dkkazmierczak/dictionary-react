@@ -57,7 +57,6 @@ function App() {
     "sand",
     "yoga",
     "beach",
-    "seaside",
     "seashore",
     "sea",
     "marine",
