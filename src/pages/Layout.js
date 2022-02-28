@@ -1,10 +1,11 @@
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faHome,
   faMagnifyingGlass,
   faUser,
 } from "@fortawesome/free-solid-svg-icons"
+import Footer from "./Footer"
 import "./Layout.scss"
 
 const Layout = () => {
@@ -14,25 +15,26 @@ const Layout = () => {
       <nav>
         <ul className="links">
           <li className="link-item">
-            <Link to="/">
+            <NavLink exact="true" activeclassname="active" to="/">
               <FontAwesomeIcon className="icon" icon={faHome} />
               <div className="text-item">Home</div>
-            </Link>
+            </NavLink>
           </li>
           <li className="link-item">
-            <Link to="/search">
+            <NavLink activeclassname="active" to="/search">
               <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
               <div className="text-item">Search</div>
-            </Link>
+            </NavLink>
           </li>
           <li className="link-item">
-            <Link to="/contact">
+            <NavLink activeclassname="active" to="/contact">
               <FontAwesomeIcon className="icon" icon={faUser} />
               <div className="text-item">About</div>
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
+      <Footer />
     </div>
   )
 }

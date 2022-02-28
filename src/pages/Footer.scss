@@ -1,0 +1,22 @@
+@import "../sass/standard.scss";
+
+footer {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 12px;
+
+  a {
+    color: #919191;
+
+    &:hover {
+      color: #919191;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    margin: 80px 0;
+  }
+}

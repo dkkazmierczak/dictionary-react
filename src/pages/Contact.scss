@@ -1,7 +1,7 @@
 @import "../sass/standard.scss";
 
 .Layout {
-  margin: 80px;
+  margin: 100px;
 }
 
 .contact {
@@ -88,7 +88,7 @@
 }
 @media (max-width: 768px) {
   .Layout {
-    margin: 20px;
+    margin: 50px 20px;
   }
   .contact {
     max-width: 500px;

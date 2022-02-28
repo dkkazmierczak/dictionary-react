@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import axios from "axios"
 import Results from "./Results/Results"
 import Photos from "./Results/Photos"
 import Loading from "../Loading"
 import "./Search.scss"
 
-const Search = () => {
-  const [change, setChange] = useState("")
+const Search = props => {
+  const [change, setChange] = useState(props.default)
   const [results, setResults] = useState("")
   const [photos, setPhotos] = useState("")
   const [loading, setLoading] = useState(false)
@@ -42,6 +42,10 @@ const Search = () => {
   const handleChange = event => {
     setChange(event.target.value)
   }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <div className="search">

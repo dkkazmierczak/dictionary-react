@@ -42,7 +42,7 @@ const Main = props => {
     <div className="main">
       <header>
         <h1>Dictionary</h1>
-        <h2>An interesting word for today:</h2>
+        <h2>An interesting word for you:</h2>
       </header>
       <div className="results-wrapper">
         {!loading && results && photos ? (
