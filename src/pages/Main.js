@@ -20,7 +20,7 @@ const Main = props => {
     setResults({
       word: data[0].word,
       meanings: data[0].meanings,
-      phonetics: data[0].phonetics,
+      phonetics: data[0].phonetics.length ? data[0].phonetics : null,
     })
 
     const pexelsApiKey =
@@ -45,17 +45,20 @@ const Main = props => {
         <h2>An interesting word for you:</h2>
       </header>
       <div className="results-wrapper">
-        {!loading && results && photos ? (
-          <div className="row">
-            <div className="col-md-6 p-0">
-              <Photos photos={photos} />
-            </div>
-            <div className="col-md-6 p-0">
-              <Results results={results} />
-            </div>
-          </div>
-        ) : (
+        {loading ? (
           <Loading />
+        ) : (
+          results &&
+          photos && (
+            <div className="row">
+              <div className="col-md-6 p-0">
+                <Photos photos={photos} />
+              </div>
+              <div className="col-md-6 p-0">
+                <Results results={results} />
+              </div>
+            </div>
+          )
         )}
       </div>
     </div>
