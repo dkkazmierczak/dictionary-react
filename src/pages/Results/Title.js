@@ -66,18 +66,26 @@ const Title = props => {
     <div className="wrapper">
       <button
         className="sound-icon"
-        disabled={!results.phonetics}
+        disabled={!results.phonetics || !results.phonetics[0].audio}
         onClick={playAudio}>
         <FontAwesomeIcon icon={faVolumeLow} />
       </button>
       <div className="text-wrapper">
         <div className="word">{results.word}</div>
-        <div className="phonetics">
+        <div
+          className={`phonetics ${
+            !results.phonetics || !results.phonetics[0].text
+              ? "hide-phonetics"
+              : ""
+          } `}>
           <span className="phonetics-text">{text}</span>
           <button
-            className="more-phonetics"
+            className={`more-phonetics ${
+              !results.phonetics || !results.phonetics[1]
+                ? "hide-phonetics"
+                : ""
+            }`}
             onClick={handleClick}
-            disabled={!results.phonetics}
             onMouseEnter={() => setModalOpen(true)}
             onMouseLeave={() => setModalOpen(false)}>
             <FontAwesomeIcon icon={faAnglesRight} />

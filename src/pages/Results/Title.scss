@@ -45,11 +45,12 @@
   }
 
   .phonetics {
+    display: block;
     position: relative;
     .phonetics-text {
       color: #919191;
       font-size: 15px;
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     .more-phonetics {
@@ -78,13 +79,17 @@
       padding: 20px;
       margin-left: 20px;
 
-      li {
+      .phonetics-item {
+        display: grid;
+        width: 100px;
+        grid-template-columns: [first] 80% [second] 20%;
         padding: 5px 0;
-        width: 120px;
+        align-items: center;
       }
 
       .phonetics-text {
         font-size: 12px;
+        margin: 0;
       }
 
       .small-sound-icon {
@@ -105,5 +110,9 @@
         }
       }
     }
+  }
+
+  .hide-phonetics {
+    display: none;
   }
 }
