@@ -1,0 +1,105 @@
+@import "/src/sass/standard.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  padding: 20px;
+  margin: 20px 0;
+
+  .sound-icon {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #919191;
+    color: #919191;
+    padding: 10px;
+    border-radius: 50%;
+    transition: $transition;
+  }
+
+  .sound-icon:not(:disabled):hover {
+    background-color: #919191;
+    color: white;
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+    .word {
+      font-size: 30px;
+      font-weight: 400;
+
+      &:first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .phonetics {
+    position: relative;
+    .phonetics-text {
+      color: #919191;
+      font-size: 15px;
+      margin-right: 20px;
+    }
+
+    .more-phonetics {
+      border-radius: 20px;
+      font-style: italic;
+      font-size: 10px;
+      padding: 5px 10px;
+      border: 1px solid #919191;
+      color: #919191;
+      background-color: $bodyBgColor;
+      transition: $transition;
+
+      &:not(:disabled):hover {
+        color: white;
+        background-color: #919191;
+      }
+    }
+
+    .phonetics-list {
+      box-shadow: $boxShadow;
+      border: 1px solid #919191;
+      position: absolute;
+      left: 50%;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+
+      li {
+        padding: 5px 0;
+        width: 110px;
+      }
+
+      .phonetics-text {
+        font-size: 12px;
+      }
+
+      .small-sound-icon {
+        button {
+          border-radius: 20px;
+          font-size: 10px;
+          padding: 5px 9px;
+          border: 1px solid #919191;
+          color: #919191;
+          background-color: white;
+          transition: $transition;
+
+          &:hover {
+            background-color: #919191;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
