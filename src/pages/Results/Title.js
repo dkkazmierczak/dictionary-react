@@ -66,7 +66,9 @@ const Title = props => {
     <div className="wrapper">
       <button
         className="sound-icon"
-        disabled={!results.phonetics || !results.phonetics[0].audio}
+        disabled={
+          !results.phonetics || !results.phonetics.find(el => !!el.audio)
+        }
         onClick={playAudio}>
         <FontAwesomeIcon icon={faVolumeLow} />
       </button>
