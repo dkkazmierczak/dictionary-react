@@ -24,7 +24,6 @@ const Title = props => {
   }
 
   useEffect(() => {
-    console.log(results)
     if (results.phonetics) getData()
   }, [])
 
@@ -76,7 +75,7 @@ const Title = props => {
         <div className="word">{results.word}</div>
         <div
           className={`phonetics ${
-            !results.phonetics || !results.phonetics[0].text
+            !results.phonetics || !results.phonetics.find(el => !!el.text)
               ? "hide-phonetics"
               : ""
           } `}>
