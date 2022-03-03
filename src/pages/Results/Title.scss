@@ -10,12 +10,14 @@
   margin: 20px 0;
 
   .sound-icon {
+    box-shadow: $boxShadow2;
     height: 40px;
     width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #919191;
+    background-color: white;
     color: #919191;
     padding: 10px;
     border-radius: 50%;
@@ -51,13 +53,14 @@
     }
 
     .more-phonetics {
+      box-shadow: $boxShadow2;
       border-radius: 20px;
       font-style: italic;
       font-size: 10px;
-      padding: 5px 10px;
+      padding: 5px 9px;
       border: 1px solid #919191;
       color: #919191;
-      background-color: $bodyBgColor;
+      background-color: white;
       transition: $transition;
 
       &:not(:disabled):hover {
@@ -67,17 +70,17 @@
     }
 
     .phonetics-list {
-      box-shadow: $boxShadow;
-      border: 1px solid #919191;
       position: absolute;
       left: 50%;
       background-color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow2;
+      padding: 20px;
+      margin-left: 20px;
 
       li {
         padding: 5px 0;
-        width: 110px;
+        width: 120px;
       }
 
       .phonetics-text {
@@ -86,6 +89,7 @@
 
       .small-sound-icon {
         button {
+          box-shadow: $boxShadow2;
           border-radius: 20px;
           font-size: 10px;
           padding: 5px 9px;

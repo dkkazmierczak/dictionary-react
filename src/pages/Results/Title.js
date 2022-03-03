@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faVolumeLow } from "@fortawesome/free-solid-svg-icons"
+import { faVolumeLow, faAnglesRight } from "@fortawesome/free-solid-svg-icons"
 import "./Title.scss"
 
 const Title = props => {
@@ -80,7 +80,7 @@ const Title = props => {
             disabled={!results.phonetics}
             onMouseEnter={() => setModalOpen(true)}
             onMouseLeave={() => setModalOpen(false)}>
-            ... more
+            <FontAwesomeIcon icon={faAnglesRight} />
           </button>
           {modalOpen && renderPhoneticsModal()}
         </div>
